@@ -20,6 +20,15 @@ body {
         box-shadow : 0 0 60px 70px white;
     }
 }
+#bottone {
+    background-color: burlywood;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    border: solid 2px black;
+    border-radius: 20px;
+}
 .box-container {
     display: flex;
     position: absolute;
