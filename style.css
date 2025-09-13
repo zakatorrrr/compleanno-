@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+    .sfondo {
+        perspective: 1000px;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        background-color: bisque;
+        background-position: center;
+        background-size: cover;
+}
+@keyframes aura {
+    0% {
+        box-shadow : 0 0 0px 0px white;
+    }
+    100% {
+        box-shadow : 0 0 60px 70px white;
+    }
+}
+.box-container {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 25vh;
+    width: 50vw;
+    border: solid 5px black;
+    margin: auto;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: burlywood;
+    animation: aura 3s forwards;
+}
+#testo {
+    font-size: 3rem;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+.img1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%)
+}
+.img2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%)
+}
+.img3 {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translate(-100%, 0%)
+}
+.img4 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%)
+}
+.img5 {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%)
+}
+.img6 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translate(0%, -100%);
+}
+.img7 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+.img8 {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-100%, -100%);
+}
+.img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8 {
+    width: 150px;
+    height: auto;
+    animation: gira 2s infinite;
+}
+.img1, .img2, .img3, .img6, .img7, .img8 {
+    animation: gira 2s infinite;
+}
+@keyframes apriti {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(90deg);
+    }
+}
+@keyframes apriti2 {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(-90deg);
+    }
+}
+@media (max-width: 600px) {
+    .box-container {
+        width: 60vw;
+        height: 15vh;
+    }
+    #testo {
+        font-size: 1.5rem;
+    }
+    .img2, .img3, .img6, .img8 {
+        width: 50vw;
+    }
+    .img1, .img7 {
+        display: none;
+    }
+    .img4 {
+        width: 50vw;
+        height: auto;
+        position: absolute;
+        top: 40%;
+        left: 0%;
+        transform-origin: left center;
+        transform: translate(-50%, -50%);
+        animation: apriti 3s forwards;
+    }
+
+    .img5 {
+        width: 50vw;
+        height: auto;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform-origin: right center;
+        transform: translate(-50%, -50%);
+        animation: apriti2 3s forwards;
+    }
+}

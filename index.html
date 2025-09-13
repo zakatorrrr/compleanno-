@@ -1,0 +1,49 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Buon compleanno FNL PAPERA</title>
+</head>
+<body>
+    <div class="sfondo">
+        <audio src="" autoplay></audio>
+        <div class="box-container">
+            <h1 id="testo">TANTI AUGURI DA PARTE DI TUTTI!!</h1>            
+        </div>
+        <img src="img1.jpg" class="img1" />
+        <img src="img2.jpg" class="img2" />
+        <img src="img3.jpg" class="img3" />
+        <img src="img4.jpg" class="img4" />
+        <img src="img5.jpg" class="img5" />
+        <img src="img6.jpg" class="img6" />
+        <img src="img7.jpg" class="img7" />
+        <img src="img8.jpg" class="img8" />
+    </div>
+    <script>
+    let sfondo = document.querySelector('.sfondo');
+    let immagine1 = document.querySelector('.img1');
+    let immagine2 = document.querySelector('.img2');
+    let immagine3 = document.querySelector('.img3');
+    let immagine4 = document.querySelector('.img4');
+    let immagine5 = document.querySelector('.img5');
+    let immagine6 = document.querySelector('.img6');
+    let immagine7 = document.querySelector('.img7');
+    let immagine8 = document.querySelector('.img8');
+    let container = document.querySelector('.box-container');
+    function cambiaimmagine() {
+        immagine1.src = `img${Math.floor(Math.random() * 8) + 1}.jpg`;
+        immagine2.src = `img${Math.floor(Math.random() * 8) + 1}.jpg`;
+        immagine3.src = `img${Math.floor(Math.random() * 8) + 1}.jpg`;
+        immagine4.src = `img${Math.floor(Math.random() * 8) + 1}.jpg`;
+        immagine5.src = `img${Math.floor(Math.random() * 8) + 1}.jpg`;
+        immagine6.src = `img${Math.floor(Math.random() * 8) + 1}.jpg`;
+        immagine7.src = `img${Math.floor(Math.random() * 8) + 1}.jpg`;
+        immagine8.src = `img${Math.floor(Math.random() * 8) + 1}.jpg`;
+        setTimeout(cambiaimmagine, 1000);
+    }
+    cambiaimmagine();
+</script>
+</body>
+
+</html>
